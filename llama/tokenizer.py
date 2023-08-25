@@ -49,7 +49,7 @@ class Tokenizer:
 
     def encode_infilling(self, s: str) -> List[int]:
         """Encode a string without an implicit leading space."""
-        return self.sp_model.encode("☺" + s)[2:]
+        return self.sp_model.encode(f"☺{s}")[2:]
 
     def decode_infilling(self, t: List[int]) -> str:
         """Decode a string without an implicit leading space."""
